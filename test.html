@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script>
+var findSubstring = function(s, words) {
+    var len = s.length;
+    var wLen = words.length;
+    var step = words[0].length;
+    if(len == 0 || len < step) return [];
+    if(wLen == 0) return []
+    if(wLen == 1) return s.indexOf(words[0]) == -1 ? [] : [s.indexOf(words[0])]
+    var map = {}
+    var num = 0;
+    for(var j = 0;j < wLen;j++){
+      map[words[j]] = true;
+    }
+    for(var i = 0;i < len;i++){
+        var temp = s.substr(i, step);
+        if(map[temp]){
+
+        }
+    }
+};
+
+
+var len = strStr("mississippi", "issip")
+console.log(len);
+</script>
+</body>
+</html>
